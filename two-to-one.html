@@ -9,17 +9,22 @@
 
 var a = "xyaabbbccccdefww";
 var b = "xxxxyyyyabklmopq";
-// var c = '';
+// var c = a += b;
+// var d = [...c];
 
-function longest(s1, s2) {
-  var c = s1 += s2;
-  var d = [...c];
-    let e = d.filter((v, i, self) => ( self.indexOf(v) === i ));
-  return e.sort().join('');
-}
 
-// ["x", "y", "a", "a", "b", "b", "b", "c", "c", "c", "c", "d", "e", "f", "w", "w", "x", "x", "x", "x", "y", "y", "y", "y", "a", "b", "k", "l", "m", "o", "p", "q"];
+// function longest(s1, s2) {
+//   var c = s1 += s2;
+//   var d = [...c];
+//     let e = d.filter((v, i, self) => ( self.indexOf(v) === i ));
+//   return e.sort().join('');
+// }
 
+// function longest(s1, s2) {
+//   return [...new Set(s1 += s2)].sort().join('');
+// }
+
+const longest = (s1, s2) => ([...new Set(s1 += s2)].sort().join(''));
 
 </script>
 </body>
