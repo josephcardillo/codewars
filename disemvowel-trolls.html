@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+<script>
+
+test1 = "This website is for losers LOL!";
+test2 = 'No foofons but,\nYour writing is among the worst I\'v ever read';
+
+function disemvowel(str) {
+  vowels = ['a','A','e','E','i','I','o','O','u','U']
+  arr = [...str];
+  for (var i = arr.length; i >= 0; i--) {
+    for (var j = 0; j < vowels.length; j++) {
+        if (arr[i] == vowels[j]) {
+          arr.splice(i, 1)
+        }
+      }
+    }
+    return arr.join('');
+  }
+
+
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+</script>
+</body>
+</html>
